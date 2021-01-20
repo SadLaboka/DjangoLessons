@@ -11,11 +11,11 @@
 {% block content %}
 <div class="card mb-3">
     <div class="card-header">
-        Категория: <a href="{{ news_item.category.get_absolute_url }}">{{ news_item.category.title }}</a>
+        Категория: <a href="{{ object.category.get_absolute_url }}">{{ object.category.title }}</a>
     </div>
     <div class="card-body">
         {% if news_item.photo %}
-        <img src="{{ news_item.photo.url }}" alt="" width="350" class="float-start mr-3">
+        <img src="{{ object.photo.url }}" alt="" width="350" class="float-start mr-3">
         {% else %}
         <img src="https://picsum.photos/id/1060/350/235/?blur=2" alt="" class="float-start mr-3">
         {% endif %}
