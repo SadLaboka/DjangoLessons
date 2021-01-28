@@ -11,7 +11,15 @@
         <li class="nav-item"><a class="nav-link" href="{% url 'add_news' %}">Добавить новость</a></li>
         {% endif %}
         <li class="nav-item"><a class="nav-link" href="{% url 'feedback' %}">Обратная связь</a></li>
+        {% if request.user.is_superuser %}
+            <li class="nav-item"><a class="nav-link" href="/admin/">Админка</a></li>
+        {% endif %}
       </ul>
+
+          {% if request.user.is_superuser %}
+            <li class="nav-item"><a class="nav-link" href="/admin/">Админка</a></li>
+          {% endif %}
+
 
       <span class="navbar-text">
         {% if request.user.is_authenticated %}
