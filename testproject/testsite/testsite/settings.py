@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'debug_toolbar',
     'news.apps.NewsConfig',
+    'testapp.apps.TestappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
